@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="input-section">
+            <input type="number" id="budget" placeholder="Enter Your Budget" />
+            <select id="timeframe">
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+            <button onclick="setBudget()">Set Budget</button>
+        </div>
+        <div class="expense-section">
+            <h2>Enter Your Expenses</h2>
+            <input type="text" id="expenseName" placeholder="Expense Name" />
+            <input type="number" id="expenseAmount" placeholder="Amount" />
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div class="reminder-section">
+            <h2>Set Reminders</h2>
+            <input type="text" id="reminderName" placeholder="Reminder Name" />
+            <input type="date" id="reminderDate" />
+            <button onclick="setReminder()">Set Reminder</button>
+        </div>
+        <h2>Expenses</h2>
+        <ul id="expenseList"></ul>
+        <h2>Total Expenses: <span id="totalExpenses">0</span></h2>
+        <h2>Remaining Budget: <span id="remainingBudget">0</span></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
